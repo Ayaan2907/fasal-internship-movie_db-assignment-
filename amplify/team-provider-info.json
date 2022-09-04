@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-moviesearch-dev-201439-authRole",
+      "UnauthRoleArn": "arn:aws:iam::360606638332:role/amplify-moviesearch-dev-201439-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::360606638332:role/amplify-moviesearch-dev-201439-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-moviesearch-dev-201439-deployment",
+      "UnauthRoleName": "amplify-moviesearch-dev-201439-unauthRole",
+      "StackName": "amplify-moviesearch-dev-201439",
+      "StackId": "arn:aws:cloudformation:ap-south-1:360606638332:stack/amplify-moviesearch-dev-201439/f12b7800-2b96-11ed-8013-0ae30414a4a4",
+      "AmplifyAppId": "dxmj7a8kqb5h3"
+    },
+    "categories": {
+      "auth": {
+        "moviesearch1c13c2af": {}
+      }
+    }
+  }
+}
