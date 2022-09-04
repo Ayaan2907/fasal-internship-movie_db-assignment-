@@ -4,18 +4,17 @@ import { Amplify } from "aws-amplify";
 import {
   withAuthenticator,
   AmplifySignOut,
-  Heading,
 } from "@aws-amplify/ui-react";
 // import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
 
 Amplify.configure(awsExports);
 
-function App({ signOut, user }) {
+function App({user}) {
   return (
     <div className="App">
       <header className="App-header">
-        Hello {user.username}
+        <p>hello </p>
         <AmplifySignOut />
       </header>
     </div>
