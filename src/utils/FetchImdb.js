@@ -1,21 +1,16 @@
-// import React from 'react'
+import axios from "axios";
 
-const { default: axios } = require("axios");
-
-// export default function FetchImdb() {
-//   return (
-//     <div>FetchImdb</div>
-//   )
-// }
-const BASE_API_URL = "http://www.omdbapi.com";
-const API_KEY = "aa660442"; //doesn't need to be confidential
-
-const FetchImdb = async (param, value) => {
-  
-  const resp = await axios.get(
-    `${BASE_API_URL}/?${param}=${value}&apikey=${API_KEY}`
-  );
-  return resp.data;
+export const FETCH_PARAMS = {
+  BASE_API_URL: "http://www.omdbapi.com",
+  API_KEY: "aa660442", //doesn't need to be confidential
+  TITLE: "s",
+  ID: "i",
 };
 
-export default FetchImdb()
+// function responsible for fetching the movies with varying parameters
+export default async function FetchImdb(param, value) {
+  const resp = await axios.get(
+    `${FETCH_PARAMS.BASE_API_URL}?${param}=${value}&apikey=${FETCH_PARAMS.API_KEY}`
+  );
+  return resp.data;
+}
