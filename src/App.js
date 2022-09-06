@@ -11,18 +11,21 @@ import { Home, Navbar } from "./components";
 Amplify.configure(awsExports);
 
 function App() {
-  // const [user, setUser] = useState(null);
-  // (async () => {
-  // let ussr = await Auth.currentSession();
-  // setUser(await Auth.currentAuthenticatedUser());
-  // console.log(user);
-  // })();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    Auth.currentAuthenticatedUser()
+      .then((user) => setUser(user.attributes.email))
+      .catch(() => setUser(null));
+    console.log(user);
+  }, []);
+
   return (
     <>
-      {/* <MovieProvider> */}
+      <div className="App">
         <BrowserRouter>
           <header className="App-navbar">
-            <Navbar />
+            <Navbar user={user} />
           </header>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -32,7 +35,7 @@ function App() {
             <Route path="*" element={<h1>404 - Not Found!</h1>} />
           </Routes>
         </BrowserRouter>
-      {/* </MovieProvider> */}
+      </div>
     </>
   );
 }

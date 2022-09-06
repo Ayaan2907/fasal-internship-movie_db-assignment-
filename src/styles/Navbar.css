@@ -1,0 +1,9 @@
+.nav-bar {
+    min-height: 7vh;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+  }

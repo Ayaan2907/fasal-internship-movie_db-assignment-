@@ -1,0 +1,10 @@
+.movie-list{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 1200px;
+}

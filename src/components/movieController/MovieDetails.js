@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import FetchImdb, { FETCH_PARAMS } from "../../utils/FetchImdb";
-
+import "../../styles/Movie-details.css";
 export default function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
@@ -27,16 +27,15 @@ export default function MovieDetails() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div>
-          <div>Movie Details</div>
+        <div className="movie-details">
           <div>
             <img src={movie.Poster} alt={movie.Title} />
           </div>
           <div>{movie.Title}</div>
           <div>{movie.year}</div>
           <div>{movie.Type}</div>
-            <div>{movie.imdbID}</div>
-            {/* TODO: display the playlist storage status and option */}
+          <div>{movie.imdbID}</div>
+          {/* TODO: display the playlist storage status and option */}
         </div>
       )}
     </>

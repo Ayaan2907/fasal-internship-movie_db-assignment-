@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MovieList from "./movieController/MovieList";
 import FetchImdb, { FETCH_PARAMS } from "../utils/FetchImdb";
-
+import "../styles/Home.css";
 export default function Home() {
   const [searchBarVal, setSearchBarVal] = useState("");
   const [movies, setMovies] = useState([]);
@@ -26,22 +26,20 @@ export default function Home() {
     }
   };
   return (
-    <>
-      <input
-        onChange={(e) => {
-          setSearchBarVal(e.target.value);
-        }}
-        onKeyUp={handleSearch}
-        autoFocus
-        type="text"
-        className="searchBar"
-        placeholder=" search here..."
-      />
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : (
-        <MovieList movies={movies} />
-      )}
-    </>
+    <div className="home">
+      <div >
+        <input
+          onChange={(e) => {
+            setSearchBarVal(e.target.value);
+          }}
+          onKeyUp={handleSearch}
+          autoFocus
+          className="search-bar"
+          type="text"
+          placeholder=" search the title ..."
+        />
+      </div>
+      <div>{loading ? <h1>Loading...</h1> : <MovieList movies={movies} />}</div>
+    </div>
   );
 }
