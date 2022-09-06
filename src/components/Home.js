@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MovieList from "./MovieList";
+import MovieList from "./movieController/MovieList";
 import FetchImdb, { FETCH_PARAMS } from "../utils/FetchImdb";
 
 export default function Home() {
