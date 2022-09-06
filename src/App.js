@@ -5,7 +5,8 @@ import "./App.css";
 import { Amplify, Auth } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import awsExports from "./aws-exports";
-import { Home, MovieDetails, Navbar } from "./components";
+import { MovieDetails } from "./components";
+import { Home, Navbar } from "./components";
 
 Amplify.configure(awsExports);
 
