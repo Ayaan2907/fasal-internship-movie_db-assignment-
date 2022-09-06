@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import "./App.css";
+import "./styles/App.css";
 // import "@aws-amplify/ui-react/styles.css";
 import { Amplify, Auth } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
@@ -28,7 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/movie/:id" element={<MovieDetails />} />
             <Route path="/playlist/" element={<h1>All playlists</h1>} />
-            <Route path="/playlist/:id" element={<MovieDetails />} />
+            <Route path="/playlist/:id" element={<h1>specific playlist</h1>} />
             <Route path="*" element={<h1>404 - Not Found!</h1>} />
           </Routes>
         </BrowserRouter>

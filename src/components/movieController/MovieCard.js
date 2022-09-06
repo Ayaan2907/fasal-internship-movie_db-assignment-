@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function MovieCard({ movie }) {
   return (
     <>
-      <Link to={`/playlist/${movie.imdbID}`}>
+      <Link to={`/movie/${movie.imdbID}`}>
         <div>
           <img src={movie.Poster} alt={movie.Title} />
           <h1>{movie.Title}</h1>
